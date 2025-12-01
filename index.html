@@ -25,6 +25,10 @@
 
     <!-- THEME STYLES -->
     <link href="css/layout.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- FONT STYLES -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 </head>
 <!-- END HEAD -->
 
@@ -192,17 +196,22 @@
         <span
             style="font-size:90px !important; font-weight:700; color:#008080; display:inline-block; line-height:1;">&nbsp;Career&nbsp;</span>
         <span style="font-size:90px !important; font-weight:700; color:#808080; display:inline-block; line-height:1;">
-        Timeline</span>
+            Timeline</span>
     </div>
 
     <style>
+        /* Use Poppins everywhere in the timeline */
+        .zigzag-timeline,
+        .zigzag-timeline * {
+            font-family: 'Poppins', sans-serif !important;
+        }
+
         /* Timeline Container - Full Width */
         .zigzag-timeline {
             position: relative;
             width: 100%;
             margin: 50px 0;
             padding: 0 40px;
-            /* padding from edges */
         }
 
         /* Vertical Line */
@@ -211,7 +220,7 @@
             position: absolute;
             left: 50%;
             width: 4px;
-            background: #00e5ff;
+            background: #ecc309;
             top: 0;
             bottom: 0;
             transform: translateX(-50%);
@@ -245,7 +254,7 @@
             position: absolute;
             width: 15px;
             height: 15px;
-            background: #00e5ff;
+            background: #008080;
             border: 3px solid #f7f7f7;
             border-radius: 50%;
             top: 20px;
@@ -262,7 +271,7 @@
         /* Text Styling */
         .timeline-year {
             font-size: 16px;
-            color: #00e5ff;
+            color:  #008080;
             font-weight: 700;
             letter-spacing: 2px;
             margin-bottom: 6px;
@@ -274,7 +283,6 @@
             font-weight: 700;
             color: #1a1a1a;
             margin-bottom: 4px;
-            font-family: 'Hind', sans-serif;
         }
 
         .timeline-role {
@@ -287,24 +295,20 @@
 
         .timeline-content ul {
             padding-left: 1em;
-            /* Align bullets nicely with text */
-            margin-left: 0;
             list-style-position: inside;
-            /* Keep bullets inside content box */
             font-size: 15px;
             color: #333;
             line-height: 1.6;
         }
 
-
         /* Hover effect on text */
         .timeline-item:hover .timeline-title {
-            color: #00e5ff;
+            color: #0474BA;
             transition: color 0.3s;
         }
 
         .timeline-item:hover .timeline-role {
-            color: #00b8d4;
+            color: #F17720;
             transition: color 0.3s;
         }
 
@@ -326,7 +330,7 @@
         }
     </style>
 
-    <div class="zigzag-timeline" >
+    <div class="zigzag-timeline">
 
         <!-- Vanilla Trans Technor -->
         <div class="timeline-item right">
@@ -387,9 +391,8 @@
 
     </div>
 
-
-
     <!-- Experience end -->
+
 
     <!-- Contact -->
     <div id="contact">
