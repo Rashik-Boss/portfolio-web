@@ -65,8 +65,6 @@
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
                                     href="#experience">Experience</a></li>
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
-                                    href="#education">Education</a></li>
-                            <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
                                     href="#work">Work</a></li>
                             <li class="js_nav-item nav-item"><a class="nav-item-child nav-item-hover"
                                     href="#contact">Contact</a></li>
@@ -90,15 +88,32 @@
                         <p class="promo-block-text">DevOps Engineer</p>
                     </div>
                     <ul class="list-inline">
-                        <li><a href="https://www.facebook.com/rashik.maharjan.2025" class="social-icons"><i
-                                    class="icon-social-facebook"></i></a></li>
-                        <li><a href="https://www.instagram.com/rashek_mhz/" class="social-icons"><i
-                                    class="icon-social-instagram"></i></a></li>
-                        <li><a href="https://github.com/Rashik-Boss" class="social-icons"><i
-                                    class="icon-social-github"></i></a></li>
-                        <li><a href="https://www.linkedin.com/in/rashik-maharjan-757034258/" class="social-icons"><i
-                                    class="icon-social-linkedin"></i></a></li>
+                        <li>
+                            <a href="https://www.facebook.com/rashik.maharjan.2025" class="social-icons" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="icon-social-facebook"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/rashek_mhz/" class="social-icons" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="icon-social-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Rashik-Boss" class="social-icons" target="_blank"
+                                rel="noopener noreferrer">
+                                <i class="icon-social-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/rashik-maharjan-757034258/" class="social-icons"
+                                target="_blank" rel="noopener noreferrer">
+                                <i class="icon-social-linkedin"></i>
+                            </a>
+                        </li>
                     </ul>
+
                 </div>
             </div>
             <!--// end row -->
@@ -173,125 +188,206 @@
     <!-- End About -->
 
     <!-- Experience Timeline Section -->
+    <div style="text-align:center; margin-bottom:40px;" id="experience">
+        <span
+            style="font-size:90px !important; font-weight:700; color:#008080; display:inline-block; line-height:1;">&nbsp;Career&nbsp;</span>
+        <span style="font-size:90px !important; font-weight:700; color:#808080; display:inline-block; line-height:1;">
+        Timeline</span>
+    </div>
+
     <style>
-    .timeline {
-        position: relative;
-        margin: 50px auto;
-        padding: 20px 0;
-        width: 90%;
-        max-width: 900px;
-        border-left: 3px solid #00e5ff;
-    }
+        /* Timeline Container - Full Width */
+        .zigzag-timeline {
+            position: relative;
+            width: 100%;
+            margin: 50px 0;
+            padding: 0 40px;
+            /* padding from edges */
+        }
 
-    .timeline-entry {
-        position: relative;
-        padding: 20px 40px;
-        margin-bottom: 60px;
-        color: #000; /* Because background is now light */
-    }
+        /* Vertical Line */
+        .zigzag-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            width: 4px;
+            background: #00e5ff;
+            top: 0;
+            bottom: 0;
+            transform: translateX(-50%);
+        }
 
-    .timeline-entry:before {
-        content: "";
-        position: absolute;
-        left: -10px;
-        top: 20px;
-        width: 15px;
-        height: 15px;
-        background: #00e5ff;
-        border-radius: 50%;
-    }
+        /* Timeline Item */
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px 40px;
+            box-sizing: border-box;
+            margin-bottom: 50px;
+        }
 
-    .timeline-year {
-        color: #00e5ff;
-        font-size: 14px;
-        letter-spacing: 2px;
-        margin-bottom: 8px;
-    }
+        /* Left and Right Items */
+        .timeline-item.left {
+            left: 0;
+            text-align: right;
+            padding-right: 60px;
+        }
 
-    .timeline-title {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 4px;
-    }
+        .timeline-item.right {
+            left: 50%;
+            text-align: left;
+            padding-left: 60px;
+        }
 
-    .timeline-role {
-        font-size: 16px;
-        font-weight: 600;
-        opacity: 0.9;
-        margin-bottom: 15px;
-    }
+        /* Circle Markers */
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            background: #00e5ff;
+            border: 3px solid #f7f7f7;
+            border-radius: 50%;
+            top: 20px;
+        }
 
-    .timeline-entry ul {
-        margin: 0;
-        padding-left: 18px;
-        font-size: 15px;
-    }
+        .timeline-item.left::before {
+            right: -8px;
+        }
 
-    /* 🔥 Updated Background Color */
-    body {
-        background: #f7f7f7; /* Light grey with white tone */
-        font-family: Arial, sans-serif;
-        color: #000;
-    }
-</style>
+        .timeline-item.right::before {
+            left: -8px;
+        }
+
+        /* Text Styling */
+        .timeline-year {
+            font-size: 16px;
+            color: #00e5ff;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .timeline-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+            font-family: 'Hind', sans-serif;
+        }
+
+        .timeline-role {
+            font-size: 16px;
+            font-weight: 500;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content ul {
+            padding-left: 1em;
+            /* Align bullets nicely with text */
+            margin-left: 0;
+            list-style-position: inside;
+            /* Keep bullets inside content box */
+            font-size: 15px;
+            color: #333;
+            line-height: 1.6;
+        }
 
 
-    <h2 style="text-align:center; color:#00e5ff; margin-bottom:40px;">Career Timeline<span style="color:white"></span>
-    </h2>
+        /* Hover effect on text */
+        .timeline-item:hover .timeline-title {
+            color: #00e5ff;
+            transition: color 0.3s;
+        }
 
-    <div class="timeline" id="experience">
+        .timeline-item:hover .timeline-role {
+            color: #00b8d4;
+            transition: color 0.3s;
+        }
 
+        /* Responsive */
+        @media screen and (max-width: 768px) {
 
-        <!-- Vanilla Transtechnor -->
-        <div class="timeline-entry">
+            .timeline-item,
+            .timeline-item.left,
+            .timeline-item.right {
+                width: 100%;
+                left: 0 !important;
+                text-align: left;
+                padding: 0 20px 40px 20px;
+            }
+
+            .timeline-item::before {
+                left: -8px !important;
+            }
+        }
+    </style>
+
+    <div class="zigzag-timeline" >
+
+        <!-- Vanilla Trans Technor -->
+        <div class="timeline-item right">
             <div class="timeline-year">2025 – Present</div>
-            <div class="timeline-title">Vanilla Trans Technor Pvt. Ltd.</div>
-            <div class="timeline-role">Junior DevOps Engineer</div>
-            <ul>
-                <li>Assist in deploying and managing cloud infrastructure.</li>
-                <li>Support CI/CD pipeline creation and maintenance.</li>
-                <li>Monitor system performance and troubleshoot issues.</li>
-                <li>Work with developers to improve deployment automation.</li>
-            </ul>
+            <div class="timeline-content">
+                <div class="timeline-title">Vanilla Trans Technor Pvt. Ltd.</div>
+                <div class="timeline-role">Junior DevOps Engineer</div>
+                <ul>
+                    <li>Assist in deploying and managing cloud infrastructure.</li>
+                    <li>Support CI/CD pipeline creation and maintenance.</li>
+                    <li>Monitor system performance and troubleshoot issues.</li>
+                    <li>Work with developers to improve deployment automation.</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Datahub Nepal -->
-        <div class="timeline-entry">
+        <div class="timeline-item left">
             <div class="timeline-year">2024 – 2025</div>
-            <div class="timeline-title">Datahub Nepal</div>
-            <div class="timeline-role">Cloud Support & System Admin Officer</div>
-            <ul>
-                <li>Managed servers, cloud environments, networking & storage.</li>
-                <li>Performed VM migrations & high-availability failovers.</li>
-                <li>Monitored, troubleshot, and secured cloud systems.</li>
-            </ul>
+            <div class="timeline-content">
+                <div class="timeline-title">Datahub Nepal</div>
+                <div class="timeline-role">Cloud Support & System Admin Officer</div>
+                <ul>
+                    <li>Managed servers, cloud environments, networking & storage.</li>
+                    <li>Performed VM migrations & high-availability failovers.</li>
+                    <li>Monitored, troubleshot, and secured cloud systems.</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Cloudfactory -->
-        <div class="timeline-entry">
+        <div class="timeline-item right">
             <div class="timeline-year">2022 – 2024</div>
-            <div class="timeline-title">Cloudfactory</div>
-            <div class="timeline-role">IT Service Delivery Analyst</div>
-            <ul>
-                <li>Supported global IT solutions and enterprise systems.</li>
-                <li>Maintained endpoint security & onboarding processes.</li>
-                <li>Resolved hardware/software issues while meeting SLAs.</li>
-            </ul>
+            <div class="timeline-content">
+                <div class="timeline-title">Cloudfactory</div>
+                <div class="timeline-role">IT Service Delivery Analyst</div>
+                <ul>
+                    <li>Supported global IT solutions and enterprise systems.</li>
+                    <li>Maintained endpoint security & onboarding processes.</li>
+                    <li>Resolved hardware/software issues while meeting SLAs.</li>
+                </ul>
+            </div>
         </div>
 
         <!-- Vianet -->
-        <div class="timeline-entry">
+        <div class="timeline-item left">
             <div class="timeline-year">2019 – 2022</div>
-            <div class="timeline-title">Vianet Communications</div>
-            <div class="timeline-role">Technical Support Engineer</div>
-            <ul>
-                <li>Handled 50+ daily customer support tickets.</li>
-                <li>Troubleshot Cisco, Huawei, and Nokia network equipment.</li>
-                <li>Provided remote support and maintained SLA compliance.</li>
-            </ul>
+            <div class="timeline-content">
+                <div class="timeline-title">Vianet Communications</div>
+                <div class="timeline-role">Technical Support Engineer</div>
+                <ul>
+                    <li>Handled 50+ daily customer support tickets.</li>
+                    <li>Troubleshot Cisco, Huawei, and Nokia network equipment.</li>
+                    <li>Provided remote support and maintained SLA compliance.</li>
+                </ul>
+            </div>
         </div>
 
     </div>
+
+
 
     <!-- Experience end -->
 
@@ -310,7 +406,8 @@
                         <div class="row">
                             <div class="col-md-3 col-xs-6 md-margin-b-30">
                                 <h5>Location</h5>
-                                <a href="#">Bholdhoka-08</a>
+                                <a href="https://maps.app.goo.gl/rBYhk1iJTF8D6Tti9" target="_blank"
+                                    rel="noopener noreferrer">Bholdhoka-08</a>
                             </div>
                             <div class="col-md-3 col-xs-6 md-margin-b-30">
                                 <h5>Phone</h5>
@@ -318,12 +415,14 @@
                             </div>
                             <div class="col-md-3 col-xs-6">
                                 <h5>Email</h5>
-                                <a href="mailto:#">itsrashikmj@gmail.com</a>
+                                <a href="mailto:itsrashikmj@gmail.com">itsrashikmj@gmail.com</a>
                             </div>
                             <div class="col-md-3 col-xs-6">
                                 <h5>Web</h5>
-                                <a href="#">https://rashikmaharjan.com.np/</a>
+                                <a href="https://rashikmaharjan.com.np/" target="_blank"
+                                    rel="noopener noreferrer">https://rashikmaharjan.com.np/</a>
                             </div>
+
                         </div>
                     </div>
                 </div>
